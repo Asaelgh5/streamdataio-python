@@ -44,10 +44,8 @@ def run():
                 print_table(data)
             elif event.event == "error":
                 print("Error: {}".format(event.data))
-                response.close()
             else:
                 print("Unhandled event received.")
-                response.close()
 
 if __name__ == "__main__":
     run()
