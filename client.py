@@ -83,8 +83,7 @@ def run(data, headers, retryCount):
                         err = json.loads(event.data)
                         status = err['status']
 
-                        """ status 2000 -> unknown error, retry can be worthwhile
-                            status 2001 -> the API had an error, retry can be worthwhile
+                        """ status 2001 -> the API had an error, retry can be worthwhile
                             status 2004 -> there was a connection issue with the targeted API server, retry can be worthwhile
                             status 2008 -> there was an issue while sending the event message from the server, retry can be worthwhile
                         """
