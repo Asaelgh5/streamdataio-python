@@ -88,7 +88,7 @@ def run(data, headers, retryCount):
                             status 2004 -> there was a connection issue with the targeted API server, retry can be worthwhile
                             status 2008 -> there was an issue while sending the event message from the server, retry can be worthwhile
                         """
-                        if retryCount < 5 and (status == 2000 or status == 2001 or status == 2004 or status == 2008):
+                        if retryCount < 5 and (status == 2001 or status == 2004 or status == 2008):
                             retryCount = retryCount + 1
                             """The server can set a retry in ms if not, we set a default
                                 one to give to the 'Requests' lib
