@@ -66,7 +66,7 @@ def run(data, headers, retryCount):
                            reconnect. That's the purpose of the code below.
 
                            BEWARE to perform an error analysis first. IN SOME CASE,
-                           YOU DON'T WANT TO RECONNECT blindling: bad API url,
+                           YOU DON'T WANT TO RECONNECT blindingly: bad API url,
                            authentication errors, etc. In such a case, you just
                            close the connection and deal with the error.
 
@@ -75,7 +75,7 @@ def run(data, headers, retryCount):
 
                            NOTE that in addition, we count the number of attempts.
                            If a threshold of unsuccessful attempts has been reached,
-                           we don't try to reconnect again: the issue is probably permanent.
+                           we don't reconnect again: the issue is probably permanent.
 
                            NOTE that you can analyze the err['message'] to provide
                            a finer error message to your end users.
